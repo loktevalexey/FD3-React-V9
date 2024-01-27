@@ -11,7 +11,7 @@ class Warning extends React.Component {
           {this.props.question}
         </span>
       </div>
-      );
+    );
   }
 
 }
