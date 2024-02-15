@@ -14,7 +14,6 @@ class VotesAnswer extends React.Component {
     freeanswertext: PropTypes.string.isRequired,
     cbFreeAnswerTextChanged: PropTypes.func.isRequired,
     cbSelected: PropTypes.func.isRequired,
-    selectedAnswerCode: PropTypes.number, // может быть null, пока ни один ответ не выбран
   };
 
   answerClicked = eo => {

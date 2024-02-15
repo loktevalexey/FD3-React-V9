@@ -23,6 +23,7 @@ class VotesBlock extends React.Component {
       <VotesAnswer key={v.code}
         text={v.text} count={v.count} code={v.code}
         freeanswer={v.freeanswer}
+        deffreeanswertext={this.props.deffreeanswertext}
         cbFreeAnswerTextChanged={this.freeAnswerTextChanged}
         workMode={this.state.workMode}
       />

@@ -10,12 +10,17 @@ class Anketa extends React.Component {
         this.setState( { fio: eo.target.value } );
     };
 
+    setPetrov = () => {
+        this.setState({ fio: "Петров" });
+    }
+
     render() {
         return (
             <div>
                 <span>Введите свою фамилию</span><br/>
                 <input type="text" value={this.state.fio} onChange={this.fioChanged} /><br/>
                 <span>Вы ввели: {this.state.fio}</span>
+                <br/><input type="button" value="установить Петров" onClick={this.setPetrov}/>
             </div>
         );
     }

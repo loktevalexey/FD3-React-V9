@@ -36,7 +36,8 @@ class VotesBlock extends React.Component {
 
   vote = () => {
     console.log('голосование завершено, выбран ответ с кодом '+this.state.selectedAnswerCode);
-    const answers=JSON.parse(JSON.stringify(this.state.answers)); // чтобы не мутировать стейт!
+    // чтобы не мутировать стейт!
+    const answers=JSON.parse(JSON.stringify(this.state.answers)); 
     answers.forEach( answer => {
       if ( answer.code===this.state.selectedAnswerCode )
           answer.count++;

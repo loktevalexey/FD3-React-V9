@@ -19,7 +19,7 @@ class VotesAnswer extends React.Component {
             {
               (this.props.freeanswer) &&
               <input type='text' name='votefreeanswer' className='FreeAnswer'
-                defaultValue="???" onChange={this.freeAnswerTextChanged} />
+                defaultValue={this.props.deffreeanswertext} onChange={this.freeAnswerTextChanged} />
             }
           </label>
         </div>
