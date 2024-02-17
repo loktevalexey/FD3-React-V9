@@ -18,7 +18,7 @@ class VotesQuestion extends React.Component {
   componentWillUnmount      = ()                   => { console.log('componentWillUnmount');      };
   
   render() {
-    console.log("render "+this.state.auxClassName);
+    console.log("render props="+this.props.auxClassName+" state="+this.state.auxClassName);
     return <div className={'VotesQuestion '+(this.state.auxClassName||"")}>{this.props.question}</div>;
   }
 
