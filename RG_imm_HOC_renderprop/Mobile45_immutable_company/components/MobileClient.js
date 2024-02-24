@@ -13,24 +13,14 @@ class MobileClient extends React.PureComponent {
     }),
   };
 
-  state = {
-    info: this.props.info,
-  };
-
-  componentDidUpdate = (oldProps, oldState) => {
-    console.log("MobileClient id="+this.props.info.id+" componentDidUpdate");
-    if ( this.props.balance!==this.state.balance )
-      this.setState({balance:this.props.balance});
-  };
-
   render() {
 
-    console.log("MobileClient id="+this.state.info.id+" render");
+    console.log("MobileClient id="+this.props.info.id+" render");
     
     return (
       <div className='MobileClient'>
-        <span className='MobileClientBalance'>{this.state.info.balance}</span>
-        <span className='MobileClientFIO'>{this.state.info.fio}</span>
+        <span className='MobileClientBalance'>{this.props.info.balance}</span>
+        <span className='MobileClientFIO'>{this.props.info.fio}</span>
       </div>
     );
 
