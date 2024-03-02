@@ -5,10 +5,17 @@ import "./Bar.css";
 export default props => {
 
   const barRef=useRef(null);
+  
+  // мы можем использовать useRef чтобы сохранять что-то своё,
+  // не вызывая перерендер компонента
+  const myRef=useRef(0);
 
   const measure = () => {
-    if ( barRef.current )
+    if ( barRef.current ) {
       console.log("ширина = "+barRef.current.offsetWidth);
+      myRef.current++;
+      console.log("мы уже меряли раз: "+myRef.current);
+    }
   };
 
   return (

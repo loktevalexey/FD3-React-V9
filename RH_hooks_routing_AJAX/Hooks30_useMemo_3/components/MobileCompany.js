@@ -17,12 +17,25 @@ export default props => {
     [clients]
   );
 
+/*
+а вот так хуки не работают:
+for ( let i=0; i>clients.length; i++ ) {
+  const client=clients[i];
+  const clientMemoizeed=useMemo(
+    () => <MobileClient key={client.id} fio={client.fio} balance={client.balance} />,
+    [client.id,client.fio,client.balance]
+  );
+  ...
+}
+*/
+
   function sidorov() {
-    let newClients=clients.slice(); // это не про иммутабельные изменения,
-    // просто для setClients требуется чтобы аргумент изменился, иначе перерендера не будет
-    newClients.forEach( client => {
-      if ( client.id===105 )
-        client.balance++;
+    let newClients=clients.slice();
+    newClients.forEach( (client,index) => {
+      if ( client.id===105 ) {
+        let newClient={...client,balance:client.balance+1};
+        newClients[index]=newClient;
+      }
     } );
     setClients(newClients);
   }

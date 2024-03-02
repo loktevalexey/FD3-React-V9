@@ -11,11 +11,12 @@ export default props => {
   const [clients,setClients]=useState(props.clients);
 
   function sidorov() {
-    let newClients=clients.slice(); // не пытаемся вносить иммутабельные изменения,
-    // просто для setClients требуется чтобы аргумент изменился, иначе перерендера не будет
-    newClients.forEach( client => {
-      if ( client.id===105 )
-        client.balance++;
+    let newClients=clients.slice();
+    newClients.forEach( (client,index) => {
+      if ( client.id===105 ) {
+        let newClient={...client,balance:client.balance+1};
+        newClients[index]=newClient;
+      }
     } );
     setClients(newClients);
   }

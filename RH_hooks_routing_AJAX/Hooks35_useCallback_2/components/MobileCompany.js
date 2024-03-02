@@ -12,9 +12,11 @@ export default props => {
 
   function changeBalance(clientId,delta) {
     let newClients=clients.slice();
-    newClients.forEach( client => {
-      if ( client.id===clientId )
-        client.balance+=delta;
+    newClients.forEach( (client,index) => {
+      if ( client.id===clientId ) {
+        const newClient={...client,balance:client.balance+delta};
+        newClients[index]=newClient;
+      }
     } );
     setClients(newClients);
   }
@@ -23,7 +25,11 @@ export default props => {
   // useCallback - обёртка над useMemo
   // т.к. массив зависимостей пуст, useCallback при каждом рендере будет возвращать 
   // одну и ту же ссылку на функцию changeBalance, 
-  // хоть сама changeBalance каждый раз новая
+  // хоть сама changeBalance каждый раз новая.
+  // это не работает корректно, потому что changeBalance 
+  // меняет массив clients иммутабельно,
+  // и мемоизированная функция memoizedChangeBalance замыкает
+  // доступ к самому первому массиву clients, ещё НЕ изменённому
 
   return (
     <div className="MobileCompany">

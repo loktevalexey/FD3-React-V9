@@ -12,9 +12,11 @@ export default props => {
 
   function changeBalance(clientId,delta) {
     let newClients=clients.slice();
-    newClients.forEach( client => {
-      if ( client.id===clientId )
-        client.balance+=delta;
+    newClients.forEach( (client,index) => {
+      if ( client.id===clientId ) {
+        const newClient={...client,balance:client.balance+delta};
+        newClients[index]=newClient;
+      }
     } );
     setClients(newClients);
   }
