@@ -8,7 +8,7 @@ export const MobileClient = ( { id, fio, balance } ) => {
   return (
     <div className='MobileClient'>
       <span className='MobileClientBalance'>{balance}</span>
-      <NavLink to={"/client/"+id} className="MobileClientFIO">{fio}</NavLink>
+      <NavLink to={"/client/"+id} end className="MobileClientFIO">{fio}</NavLink>
     </div>
   );
 
