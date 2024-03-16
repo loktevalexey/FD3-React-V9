@@ -10,6 +10,10 @@ export const ShowInfo = () => {
 
   const profile = useSelector( state => state.profile );
 
+  // const onlyMyData = useSelector( state => { 
+  //   return {apples:state.fruits.apples,firstname:state.profile.firstname} 
+  // } );
+
   return (
     <>
       <div>Apples: {fruits.apples}</div>
