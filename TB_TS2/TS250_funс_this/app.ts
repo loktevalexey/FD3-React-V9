@@ -1,4 +1,4 @@
-// автотипизация car1
+// автотипизация car1 - this:any
 
 let car1={
 
@@ -14,7 +14,7 @@ let car1={
 };
 car1.show("INFO #1:");
 
-// явная типизация car2
+// явная типизация car2 - this:any
 
 type Car={
     num:string,
@@ -36,7 +36,7 @@ let car2:Car={
 };
 car2.show("INFO #2:");
 
-// автотипизация car3, с явной типизацией сработает тоже
+// явно указываем тип this
 
 let car3={
     
@@ -55,4 +55,4 @@ car3.show("INFO #3:");
 const showRef=car3.show;
 //showRef("INFO #3:"); // ошибка
 showRef.call(car3,"INFO #3:");
-// showRef.call({},"INFO #3:"); // должна быть ошибка, но нет
+showRef.call({},"INFO #3:"); // должна быть ошибка, но нет
