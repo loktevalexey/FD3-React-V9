@@ -13,7 +13,8 @@ type VotesBlockPropTypes = {
 const VotesBlock = ({answers,question}:VotesBlockPropTypes) => {
 
   const answersCode=answers.map( v =>
-    <VotesAnswer key={v.code} text={v.text} count={v.count} code={v.code} />
+    <VotesAnswer key={v.code} text={v.text} count={v.count} code={v.code} />    
+    //<VotesAnswer key={v.code} {...v} />
   );
 
   return (

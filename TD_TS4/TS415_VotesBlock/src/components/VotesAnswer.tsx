@@ -4,7 +4,7 @@ import './VotesAnswer.css';
 
 import { WorkMode } from './VotesBlock';
 
-export type VotesAnswerDataType = {
+export interface VotesAnswerDataType {
   code: number;
   text: string;
   count: number;
