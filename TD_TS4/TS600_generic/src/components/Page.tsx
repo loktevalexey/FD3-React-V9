@@ -1,5 +1,5 @@
-//import ButtonPanel from "./ButtonPanelA.tsx";
-import ButtonPanel from "./ButtonPanelB";
+import ButtonPanel from "./ButtonPanelA";
+//import ButtonPanel from "./ButtonPanelB";
 
 //type MyButtonCode="hello"|"goodbye";
 
