@@ -6,6 +6,8 @@ export default props => {
 
   const [age, setAge] = useState(25);
 
+  console.log("render",age);
+
   useEffect(
     ()=>{
       fetch("https://fe.it-academy.by/Examples/Hotel/hotelinfo.json")
