@@ -10,8 +10,11 @@ export default props => {
   useEffect(
     ()=>{
       console.log("useEffect cnt",cnt);
-      const timer=setInterval( ()=>setCnt(prevCnt=>prevCnt+1) ,1000);
-      //const timer=setInterval(()=>setCnt(cnt+1),1000);
+      const timer=setInterval(()=>{
+        console.log("таймер сработал",cnt);
+        setCnt(cnt+1);
+      },1000);
+      //const timer=setInterval( ()=>setCnt(prevCnt=>prevCnt+1) ,1000);
       console.log("таймер запущен");
       //return ()=>{
       //  clearTimeout(timer);
