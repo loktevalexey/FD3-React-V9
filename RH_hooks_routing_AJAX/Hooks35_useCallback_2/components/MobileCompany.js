@@ -21,6 +21,21 @@ export default props => {
     setClients(newClients);
   }
 
+  /*
+  function changeBalance(clientId,delta) {
+    setClients( currClients => {
+      let newClients=currClients.slice();
+      newClients.forEach( (client,index) => {
+        if ( client.id===clientId ) {
+          const newClient={...client,balance:client.balance+delta};
+          newClients[index]=newClient;
+        }
+      } );
+      return newClients;
+    } );
+  }
+*/    
+
   const memoizedChangeBalance = useCallback( changeBalance, [] );
   // useCallback - обёртка над useMemo
   // т.к. массив зависимостей пуст, useCallback при каждом рендере будет возвращать 
