@@ -18,7 +18,6 @@ async function mobileCompanyDataFetcher() {
   return response.json();
 };
 
-
 function MobileCompany() {
 
   const { data, error, isLoading } = useSWR(
