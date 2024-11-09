@@ -4,25 +4,30 @@ let friend:{fam:string,im:string,otch:string,age:number}
 console.log(friend);
 
 friend.fam="Петров";
-// friend.fam2="Сидоров"; // ошибка
+//friend.fam2="Сидоров"; // ошибка
 // friend.fam=222;
 
 {
-    let friendKey:keyof typeof friend;
-    friendKey="fam";
-    //friendKey="fam2"; // ошибка
-    //friendKey="age";
-    friend[friendKey]="sss";
-    // friend[friendKey]=5; // ошибка
-
-    //let keyname=prompt("введите имя ключа");
-    //friend[keyname]="newval";
+    const key="fam";
+    //const key=confirm("sdfgfgsfgsdfg")?"fam":"im";
+    friend[key]="Петров";
 }
 
 {
     let friendKey:keyof {fam:string,im:string,otch:string,age:number};
     friendKey="fam";
     //friendKey="fam2"; // ошибка
+}
+
+{
+    console.log(typeof friend);
+
+    let friendKey:keyof typeof friend;
+    friendKey="fam";
+    //friendKey="fam2"; // ошибка
+    //friendKey="age";
+    friend[friendKey]="sss";
+    //friend[friendKey]=5; // ошибка
 }
 
 // а если мы хотим старый добрый объект с произвольными парами ключ-значение:
