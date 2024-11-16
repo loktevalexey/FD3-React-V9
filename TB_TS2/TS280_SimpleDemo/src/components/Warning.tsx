@@ -11,7 +11,7 @@ export const Warning = ({question}:WarningProps) => {
   return (
     <div className='Warning'>
       <span className='Warning_Text'>
-        {question}
+        {question.toLowerCase()}
       </span>
     </div>
     );

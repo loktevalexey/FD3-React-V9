@@ -6,16 +6,23 @@ import './MobileCompany.css';
 
 class MobileCompany extends React.PureComponent {
 
+  alive = false;
+
   constructor(props) {
     super(props);
     // this.loadData();
     // не надо запускать асинхронные или долгие операции из конструктора
     // конструктор инициализирует только КЛАСС, это ещё не React-компонент
     // конструктор должен быть лёгким и быстрым
+    this.alive=true;
   }
 
   componentDidMount() {
     this.loadData();
+  }
+
+  componentWillUnmount() {
+    this.alive=false;
   }
 
   state = {
@@ -52,7 +59,8 @@ class MobileCompany extends React.PureComponent {
     else {
       const data=await response.json();
       // в data - пришедшие в ответе данные
-      this.fetchSuccess(data);
+      if ( this.alive )
+        this.fetchSuccess(data);
     }
 
   };
