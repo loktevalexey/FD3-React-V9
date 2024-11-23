@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React, {ReactNode, ReactElement} from 'react';
 
   // тип ReactElement - объект, описывающий React-тег или компонент, т.е. кусок VDOM
   // тип JSX.Element - примерно то же самое

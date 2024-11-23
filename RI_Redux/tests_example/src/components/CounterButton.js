@@ -17,7 +17,9 @@ class CounterButton extends React.PureComponent {
     return (
       <div>
         <h3>Кнопка-счётчик нажатий</h3>
-        <input type="button" value={"нажатий: "+this.state.counter+', степень двойки: '+power2(this.state.counter)} onClick={this.pressed} />
+        <input type="button" 
+          value={"нажатий: "+this.state.counter+', степень двойки: '+power2(this.state.counter)} 
+          onClick={this.pressed} />
       </div>
     )
     ;

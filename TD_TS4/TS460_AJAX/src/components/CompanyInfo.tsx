@@ -28,7 +28,7 @@ type CompanyType = {
   clientsArr: Array<ClientType>;
 }
 
-async function downloadData():Promise<CompanyType> {
+async function downloadData() {
   const response=await fetch("http://fe.it-academy.by/TestFetch.php", {
     method: 'post',
     headers: {

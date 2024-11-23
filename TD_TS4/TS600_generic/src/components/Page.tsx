@@ -3,6 +3,7 @@ import ButtonPanel from "./ButtonPanelA";
 
 //type MyButtonCode="hello"|"goodbye";
 
+//const var0 = Math.random()>0.5 ? "aaa" : "bbb";
 //const var1 = { color: (Math.random()>0.5)?"aaa":"bbb" };
 //const var2 = { color: (Math.random()>0.5)?"aaa":"bbb" } as const;
 
