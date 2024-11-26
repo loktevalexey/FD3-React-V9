@@ -3,9 +3,10 @@ import ButtonPanel from "./ButtonPanelA";
 
 //type MyButtonCode="hello"|"goodbye";
 
-//const var0 = Math.random()>0.5 ? "aaa" : "bbb";
-//const var1 = { color: (Math.random()>0.5)?"aaa":"bbb" };
-//const var2 = { color: (Math.random()>0.5)?"aaa":"bbb" } as const;
+//const var1 = Math.random()>0.5 ? "aaa" : "bbb";
+//let var2 = Math.random()>0.5 ? "aaa" : "bbb";
+//const var3 = { color: (Math.random()>0.5)?"aaa":"bbb" };
+//const var4 = { color: (Math.random()>0.5)?"aaa":"bbb" } as const;
 
 export const Page = () => {
 
