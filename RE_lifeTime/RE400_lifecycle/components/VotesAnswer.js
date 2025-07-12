@@ -17,7 +17,7 @@ class VotesAnswer extends React.Component {
     selectedAnswerCode: PropTypes.number, // может быть null, пока ни один ответ не выбран
   };
 
-  componentDidUpdate   = (oldProps, oldState) => { if ( this.props.code==3 ) console.log('componentDidUpdate');        };
+  componentDidUpdate   = (oldProps, oldState) => { if ( this.props.code==3 ) console.log('componentDidUpdate',oldProps,this.props);        };
   componentDidMount    = ()                   => { if ( this.props.code==3 ) console.log('componentDidMount');         };
   componentWillUnmount = ()                   => { if ( this.props.code==3 ) console.log('componentWillUnmount');      };
 

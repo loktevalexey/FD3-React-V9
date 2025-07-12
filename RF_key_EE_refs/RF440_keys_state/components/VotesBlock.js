@@ -85,7 +85,7 @@ class VotesBlock extends React.Component {
         {
           (this.state.visibleQuestionNum==3) &&
           <div style={{border:"solid green 2px"}}>
-            <VotesQuestion key={1} question={this.props.question} />
+            <VotesQuestion key={1} question={this.props.question} auxClassName="VotesQuestionRed" />
           </div>
         }
         <div className='Answers'>{answersCode}</div>
