@@ -25,9 +25,9 @@ class VotesBlock extends React.Component {
     // this.setState({cnt:this.state.cnt+1});
     // this.setState({cnt:this.state.cnt+1});
 
-    // this.setState( (prevState, props) => { return {cnt:prevState.cnt+1}; } );
-    // this.setState( (prevState, props) => { return {cnt:prevState.cnt+1}; } );
-    // this.setState( (prevState, props) => { return {cnt:prevState.cnt+1}; } );
+    // this.setState( prevState => { return {cnt:prevState.cnt+1}; } );
+    // this.setState( prevState => { return {cnt:prevState.cnt+1}; } );
+    // this.setState( prevState => { return {cnt:prevState.cnt+1}; } );
   };
 
   render() {
