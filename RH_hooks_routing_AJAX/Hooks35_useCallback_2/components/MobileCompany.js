@@ -8,6 +8,7 @@ export default props => {
 
   console.log("render MobileCompany");
 
+  const [companyName,setCompanyName]=useState("МТС");
   const [clients,setClients]=useState(props.clients);
 
   function changeBalance(clientId,delta) {
@@ -48,6 +49,10 @@ export default props => {
 
   return (
     <div className="MobileCompany">
+      Компания: <b>{companyName}</b><br />
+      <input type="button" value="=А1" onClick={()=>setCompanyName("A1")} />
+      <input type="button" value="=МТС" onClick={()=>setCompanyName("МТС")} />
+      <br /><br />
       {
         clients.map( client => <MobileClient key={client.id} 
           id={client.id} 
