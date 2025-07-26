@@ -6,7 +6,7 @@ export const Third = () => {
 
   const currStyle = useContext(StyleContext); // gets what the nearest StyleContext.Provider provides
 
-  console.log("render Third component with fontSize="+currStyle.fontSize);
+  console.log("render Third component with color="+currStyle.color+" fontSize="+currStyle.fontSize);
 
   return (
     <div style={ { fontSize: currStyle.fontSize, color: currStyle.color } }>
