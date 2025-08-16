@@ -11,13 +11,14 @@ export const WeatherDisplay = () => {
 
   function load() {
     dispatch( weatherLoad ); // looks like a regular dispatch of a regular action
+    //weatherLoad(dispatch);
   };
 
   return (
     <>
       { (weather.dataLoadState===0) && "no data" }
       { (weather.dataLoadState===1) && "loading..." }
-      { (weather.dataLoadState===2) && "in 2000 is: "+weather.data.data["2000"] }
+      { (weather.dataLoadState===2) && "in 2000 is: "+weather.data.data["2000"].anomaly }
       { (weather.dataLoadState===3) && "error: "+weather.dataLoadError }
       <br/>
       <input type='button' value='load data' onClick={load} />

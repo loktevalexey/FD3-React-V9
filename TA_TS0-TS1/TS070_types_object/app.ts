@@ -4,12 +4,13 @@ let friend:{fam:string,im:string,otch:string,age:number}
 console.log(friend);
 
 friend.fam="Петров";
-//friend.fam2="Сидоров"; // ошибка
+// friend.fam2="Сидоров"; // ошибка
 // friend.fam=222;
 
 {
     const key="fam";
     //const key=confirm("sdfgfgsfgsdfg")?"fam":"im";
+    //const key:string=prompt("sfdgsfgsfgsdgsdfg");
     friend[key]="Петров";
 }
 
