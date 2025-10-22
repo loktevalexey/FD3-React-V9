@@ -1,7 +1,7 @@
 {
-  "name": "votesblock",
+  "name": "simpledemo",
   "version": "1.0.0",
-  "description": "блок голосования",
+  "description": "простое демо",
   "main": "App.js",
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",
