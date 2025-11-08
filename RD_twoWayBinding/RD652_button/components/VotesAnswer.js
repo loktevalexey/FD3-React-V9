@@ -28,11 +28,12 @@ class VotesAnswer extends React.Component {
   render() {
 
     if ( this.props.workMode==1 ) {
+      const isSelected=(this.props.selectedAnswerCode==this.props.code);
       return (
         <div>
           <label className='VotesBlockAnswer'>
             <input type='radio' value={this.props.code} name='voteanswer'
-              checked={this.props.selectedAnswerCode==this.props.code}
+              checked={isSelected}
               onChange={this.answerClicked}
             />
             <span>{this.props.text}</span>
@@ -40,7 +41,7 @@ class VotesAnswer extends React.Component {
               (this.props.freeanswer) &&
               <input type='text' name='votefreeanswer' className='FreeAnswer'
                 value={this.props.freeanswertext} onChange={this.freeAnswerTextChanged}
-                disabled={this.props.selectedAnswerCode!=this.props.code}
+                disabled={!isSelected}
               />
             }
           </label>
