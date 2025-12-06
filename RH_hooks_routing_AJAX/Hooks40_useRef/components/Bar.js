@@ -10,6 +10,8 @@ export default props => {
   // не вызывая перерендер компонента
   const myRef=useRef(0);
 
+  console.log('render');
+
   const measure = () => {
     if ( barRef.current ) {
       console.log("ширина = "+barRef.current.offsetWidth);

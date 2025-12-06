@@ -35,7 +35,7 @@ export default props => {
       return newClients;
     } );
   }
-*/    
+ */
 
   const memoizedChangeBalance = useCallback( changeBalance, [] );
   // useCallback - обёртка над useMemo
