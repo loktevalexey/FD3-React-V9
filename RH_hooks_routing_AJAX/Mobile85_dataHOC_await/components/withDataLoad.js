@@ -4,24 +4,13 @@ let withDataLoad = (fetchConfig,propName) => Component => {
 
     class ComponentWithDataLoad extends React.Component {
 
-        componentDidMount() {
-          this.loadData();
-        }
-      
         state = {
           dataReady: false, // готовы ли данные
         };
-      
-        fetchError = errorMessage => {
-          console.error(errorMessage);
-        };
-      
-        fetchSuccess = loadedData => {
-          this.setState({
-            dataReady:true,
-            loadedData:loadedData,
-          });
-        };
+
+        componentDidMount() {
+          this.loadData();
+        }
       
         loadData = async () => {
       
@@ -31,10 +20,13 @@ let withDataLoad = (fetchConfig,propName) => Component => {
               throw new Error("fetch error " + response.status);
             }
             let data=await response.json();
-            this.fetchSuccess(data);
+            this.setState({
+              dataReady:true,
+              loadedData:data,
+            });
           } 
           catch ( error )  {
-            this.fetchError(error.message);
+            console.error(error.message);
           }
       
         };

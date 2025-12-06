@@ -17,6 +17,12 @@ class MobileCompany extends React.PureComponent {
     this.alive=true;
   }
 
+  state = {
+    dataReady: false,
+    name: "???",
+    clients: [],
+  };
+
   componentDidMount() {
     this.loadData();
   }
@@ -24,25 +30,6 @@ class MobileCompany extends React.PureComponent {
   componentWillUnmount() {
     this.alive=false;
   }
-
-  state = {
-    dataReady: false,
-    name: "???",
-    clients: [],
-  };
-
-  fetchError = (errorMessage) => {
-    alert(showStr);
-  };
-
-  fetchSuccess = (loadedData) => {
-    console.log(loadedData);
-    this.setState({
-      dataReady:true,
-      name:loadedData.companyName,
-      clients:loadedData.clientsArr,
-    });
-  };
 
   loadData = async () => {
 
@@ -54,13 +41,19 @@ class MobileCompany extends React.PureComponent {
     });
     // в response - http-ответ
     if ( !response.ok ) {
-      this.fetchError("fetch error " + response.status);
+      alert("fetch error " + response.status);
     }
     else {
       const data=await response.json();
       // в data - пришедшие в ответе данные
-      if ( this.alive )
-        this.fetchSuccess(data);
+      if ( this.alive ) {
+        console.log(data);
+        this.setState({
+          dataReady:true,
+          name:data.companyName,
+          clients:data.clientsArr,
+        });
+      }
     }
 
   };
