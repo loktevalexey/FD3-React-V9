@@ -67,3 +67,4 @@ let trainObj={
     speed:100,
 };
 // let car3:Car=<Car>trainObj; // ошибка
+// let car3:Car=trainObj as any as Car; // а так работает
