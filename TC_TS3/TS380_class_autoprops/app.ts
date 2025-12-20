@@ -5,12 +5,15 @@ class Transp {
 
     protected maxSpeed:number;
     
+    // private serialNumber:string;
+
     constructor(private serialNumber:string) {
         this.speed=0; 
         this.maxSpeed=100;
         // свойство serialNumber автоматически создано 
         // с модификатором private и ему присвоено
-        // значение аргумента конструктора serialNumber
+        // значение аргумента конструктора serialNumber:
+        // this.serialNumber=serialNumber;
     }
 
     getSerialNumber():string {

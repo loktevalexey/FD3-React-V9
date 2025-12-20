@@ -70,7 +70,7 @@ export const CompanyInfo = () => {
   },[]);
 
   return (
-    //<ColorFrame>
+    <ColorFrame>
       <div>
         { downloadStatus===DownloadStatus.LOADING && "Загрузка данных..." }
         { downloadStatus===DownloadStatus.ERROR && "ОШИБКА!" }
@@ -91,7 +91,7 @@ export const CompanyInfo = () => {
           </div>
         }
       </div>
-    //</ColorFrame>
+    </ColorFrame>
     );
 
 };
